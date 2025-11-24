@@ -1,8 +1,33 @@
 {
   "name": "exceljs-ext",
-  "version": "0.1.0",
-  "module": "index.ts",
+  "version": "0.1.1",
+  "description": "A TypeScript toolkit providing utility functions based on ExcelJS for common Excel file processing scenarios",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target node --format esm",
+    "prepublishOnly": "bun run build",
+    "dev": "bun --watch ./src/index.ts"
+  },
+  "keywords": [
+    "excel",
+    "exceljs",
+    "validation",
+    "xlsx",
+    "spreadsheet",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyung-lee-official/exceljs-ext"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
